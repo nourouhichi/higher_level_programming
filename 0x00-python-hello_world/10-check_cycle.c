@@ -9,9 +9,11 @@ int check_cycle(listint_t *list)
 {
 	listint_t *first, *roadrunner;
 
+	if (!list)
+		return(0);
 	first = list;
 	roadrunner = list->next;
-	while (first)
+	do
 	{
 		while (roadrunner)
 		{
@@ -21,8 +23,7 @@ int check_cycle(listint_t *list)
 
 		}
 		first = first->next;
-	}
-
+	}while (first);
 	return (0);
 }
 
