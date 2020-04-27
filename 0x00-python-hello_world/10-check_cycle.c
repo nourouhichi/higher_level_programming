@@ -13,6 +13,8 @@ int check_cycle(listint_t *list)
 		return (0);
 	first = list;
 	roadrunner = list->next;
+	if (!roadrunner)
+		return(0);
 	while (first)
 	{
 		while (roadrunner)
