@@ -13,4 +13,3 @@ elif last == 0:
     print(string .format(n, last, "0"))
 else:
     print(string .format(n, last, "less than 6 and not 0"))
-
