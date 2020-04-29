@@ -12,18 +12,14 @@ int check_cycle(listint_t *list)
 	if (!list)
 		return(0);
 	first = list;
-	roadrunner = list->next;
-	do
+	roadrunner = list;
+	while(roadrunner && roadrunner->next && first)
 	{
-		while (roadrunner)
-		{
+		first = first->next;
+		roadrunner = roadrunner->next->next;
 			if (roadrunner == first)
 				return (1);
-			roadrunner = roadrunner->next;
-
-		}
-		first = first->next;
-	}while (first);
+	}
 	return (0);
 }
 
