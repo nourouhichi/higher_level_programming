@@ -16,5 +16,5 @@ if __name__ == "__main__":
     elif argv[2] is "/":
         print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
     else:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
