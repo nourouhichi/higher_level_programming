@@ -11,7 +11,9 @@ int is_palindrome(listint_t **head)
 	listint_t *runner = NULL;
 	int i, j, array[1024], x = 0;
 
-	if (!head || !*head)
+	if (!head)
+		return (0);
+	if(!*head)
 		return (1);
 	runner = *head;
 	for (i = 0; runner && x < 1024; i++, runner = runner->next, x++)
