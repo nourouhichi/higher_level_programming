@@ -9,16 +9,14 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *runner = *head;
-	int i, j, array[1024];
+	int i, j, array[1024], x = 0;
 
 	if (!head || !*head || !(*head)->next)
 		return (1);
-	for (i = 0; runner; i++)
-	{
+	for (i = 0; runner; i++, runner = runner->next, x++)
 		array[i] = runner->n;
-		runner = runner->next; 
-	}
-	for (i--, j = 0; i > j ; i--, j++)
+	x--;
+	for (i--, j = 0; j <= x / 2 ; i--, j++)
 	{
 		if (array[i] != array[j])
 		{
