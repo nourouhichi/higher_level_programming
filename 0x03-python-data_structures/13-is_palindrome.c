@@ -10,10 +10,13 @@ int is_palindrome(listint_t **head)
 {
 	int i, j;
 	listint_t *road_runner = *head;
-	int array[1024];
+	int *array;
 
+	if (!head)
+		return (0);
 	if (!*head || !(*head)->next)
 		return (1);
+	array = malloc(sizeof(int) * 100);
 	for (i = 0; road_runner; i++)
 	{
 		array[i] = road_runner->n;
@@ -22,8 +25,12 @@ int is_palindrome(listint_t **head)
 	for (i--, j = 0; i >= j ; i--, j++)
 	{
 		if (array[i] != array[j])
+		{
+			free(array);
 			return (0);
+		}
 	}
+	free(array);
 	return (1);
 }
 
