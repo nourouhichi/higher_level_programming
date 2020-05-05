@@ -8,29 +8,23 @@
  */
 int is_palindrome(listint_t **head)
 {
-	int i, j;
-	listint_t *road_runner = *head;
-	int *array;
+	int x = 0, i, j, array[1024];
 
-	if (!head)
-		return (0);
-	if (!*head || !(*head)->next)
+	if (!head || !*head || !(*head)->next)
 		return (1);
-	array = malloc(sizeof(int) * 100);
-	for (i = 0; road_runner; i++)
+	for (i = 0; *head; i++)
 	{
-		array[i] = road_runner->n;
-		road_runner = road_runner->next; 
+		array[i] = (*head)->n;
+		*head = (*head)->next; 
 	}
-	for (i--, j = 0; i >= j ; i--, j++)
+	x = i / 2;
+	for (i--, j = 0; i <= x ; i--, j++)
 	{
 		if (array[i] != array[j])
 		{
-			free(array);
 			return (0);
 		}
 	}
-	free(array);
 	return (1);
 }
 
