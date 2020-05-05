@@ -8,11 +8,12 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *runner = *head;
+	listint_t *runner = NULL;
 	int i, j, array[1024], x = 0;
 
-	if (!head || !*head || !(*head)->next)
+	if (!head || !*head)
 		return (1);
+	runner = *head;
 	for (i = 0; runner && x < 1024; i++, runner = runner->next, x++)
 		array[i] = runner->n;
 	x--;
