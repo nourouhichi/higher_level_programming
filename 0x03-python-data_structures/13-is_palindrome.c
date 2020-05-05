@@ -12,15 +12,14 @@ int is_palindrome(listint_t **head)
 	listint_t *road_runner = *head;
 	int array[1024];
 
-	if (!*head)
+	if (!*head || !(*head)->next)
 		return (1);
-	for (i = 0; road_runner != NULL; i++)
+	for (i = 0; road_runner; i++)
 	{
 		array[i] = road_runner->n;
-		road_runner = road_runner->next; }
-	if (i % 2 != 0)
-		return (0);
-	for (i--, j = 0; i > j ; i--, j++)
+		road_runner = road_runner->next; 
+	}
+	for (i--, j = 0; i >= j ; i--, j++)
 	{
 		if (array[i] != array[j])
 			return (0);
