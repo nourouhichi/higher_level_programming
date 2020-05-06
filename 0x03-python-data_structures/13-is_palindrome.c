@@ -16,7 +16,7 @@ int is_palindrome(listint_t **head)
 	if(!*head)
 		return (1);
 	runner = *head;
-	for (i = 0; runner && x < 1024; i++, runner = runner->next, x++)
+	for (i = 0; runner && x < 4000; i++, runner = runner->next, x++)
 		array[i] = runner->n;
 	x--;
 	for (i--, j = 0; j <= x / 2 ; i--, j++)
