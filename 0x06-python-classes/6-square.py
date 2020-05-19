@@ -19,8 +19,7 @@ class Square:
         i = type(value[1]) is not int
         z = value[0] < 0
         v = value[1] < 0
-        w = len(value) is not 2
-        if y or x or i or z or v or w:
+        if y or x or i or z or v:
             raise TypeError("position must be a tuple of 2 positive integer")
         else:
             self.__position = value
@@ -48,5 +47,5 @@ class Square:
         else:
             print('\n' * self.__position[1], end="")
             for i in range(self.__size):
-                print(' ' *  self.__position[0], end="")
+                print(' ' * self.__position[0], end="")
                 print('#' * self.__size)
