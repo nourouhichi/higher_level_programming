@@ -58,6 +58,7 @@ class SinglyLinkedList(Node):
         if roadrunner.data > value:
             self.__head = new
             new.next_node = roadrunner
+            return
         while roadrunner:
             while roadrunner.data < value and roadrunner.next_node:
                 roadrunner = roadrunner.next_node
