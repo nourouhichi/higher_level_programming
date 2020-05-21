@@ -62,6 +62,9 @@ class SinglyLinkedList(Node):
         if self.__head is None:
             self. __head = new
             return
+        if roadrunner.data > value:
+            self.__head = new
+            new.next_node = roadrunner
         while roadrunner:
             while roadrunner.data < value and roadrunner.next_node:
                 roadrunner = roadrunner.next_node
