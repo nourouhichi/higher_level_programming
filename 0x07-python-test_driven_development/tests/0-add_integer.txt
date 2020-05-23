@@ -1,0 +1,51 @@
+===================
+Integers additon
+===================
+Importing the  module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Testing the following examples:
+
+Int, int:	
+	>>> add_integer(1,2)
+	3
+
+None, none:
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+No args:
+	>>> add_integer()
+	Traceback (most recent call last):
+ 	...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Str, int:
+	>>> add_integer("I am a string", 5)
+        Traceback (most recent call last):
+        ...
+		raise TypeError("a must be an integer")
+        TypeError: a must be an integer
+
+int, str:
+	>>> add_integer(5, "holberton")
+        Traceback (most recent call last):
+        ...
+                raise TypeError("a must be an integer")
+        TypeError: b must be an integer
+
+Float, float:
+	>>> add_integer(2.25, 5.36)
+	7
+
+Int:
+	>>> add_integer(1)
+	99
+
+Inf, int:
+	>>> add_integer(float('inf'), 1)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
