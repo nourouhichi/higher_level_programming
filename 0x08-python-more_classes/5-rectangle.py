@@ -59,4 +59,3 @@ class Rectangle:
 
     def __del__(slef):
         print("Bye rectangle...")
-
