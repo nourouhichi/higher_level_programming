@@ -43,10 +43,12 @@ class Rectangle:
             self.__height = height
 
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        return (self.__width + self.__height) * 2
+        if self.width * self.height is 0:
+            return 0
+        return (self.width + self.height) * 2
 
     def __str__(self):
         rect = ""
