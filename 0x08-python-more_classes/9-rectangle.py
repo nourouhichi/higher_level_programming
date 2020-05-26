@@ -61,7 +61,7 @@ class Rectangle:
         return rect
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(slef):
         print("Bye rectangle...")
