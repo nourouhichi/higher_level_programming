@@ -51,3 +51,9 @@ non empty list:
         >>> my_list.append(5)
 	>>> my_list.print_sorted()
 	[1, 2, 3, 4, 5, 10, 99]
+
+appending a big number:
+        >>> my_list = MyList([10, 99])
+        >>> my_list.append(123456789123456789123456789)
+        >>> my_list.print_sorted()
+	[10, 99, 123456789123456789123456789]
