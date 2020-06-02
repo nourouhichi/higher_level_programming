@@ -57,3 +57,16 @@ appending a big number:
         >>> my_list.append(123456789123456789123456789)
         >>> my_list.print_sorted()
 	[10, 99, 123456789123456789123456789]
+
+giving a param to the method:
+        >>> my_list = MyList([10, 99])
+        >>> my_list.append(1)
+        >>> my_list.append(4)
+        >>> my_list.append(2)
+        >>> my_list.append(3)
+        >>> my_list.append(5)
+        >>> my_list.print_sorted("holbies")
+	Traceback (most recent call last):
+	...
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
+
