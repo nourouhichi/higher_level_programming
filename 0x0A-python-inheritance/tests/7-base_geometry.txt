@@ -26,7 +26,7 @@ Missing one arg:
 
 giving a non int arg:
         >>> b = BaseGeometry()
-        >>> b.integer_validator("holbies",  2.58)
+        >>> b.integer_validator("holbies", 2.58)
 	Traceback (most recent call last):
 	...
 	TypeError: holbies must be an integer
@@ -66,3 +66,9 @@ passing more than 2 args:
 	...
 	TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
+passing a string:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies","45")
+        Traceback (most recent call last):
+        ...
+        TypeError: holbies must be an integer
