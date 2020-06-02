@@ -79,3 +79,24 @@ passing a tuple:
         Traceback (most recent call last):
         ...
         TypeError: holbies must be an integer
+
+passing a float:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies", 4.55)
+        Traceback (most recent call last):
+        ...
+        TypeError: holbies must be an integer
+
+passing a list:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies",[])
+        Traceback (most recent call last):
+        ...
+        TypeError: holbies must be an integer
+
+passing a dict:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies",{})
+        Traceback (most recent call last):
+        ...
+        TypeError: holbies must be an integer
