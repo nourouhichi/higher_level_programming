@@ -1,0 +1,46 @@
+=======
+task 7:
+=======
+
+Importing module:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Testing:
+all right:
+	>>> b = BaseGeometry()
+	>>> b.integer_validator("my_int", 12)
+	
+no args:
+	>>> b = BaseGeometry()
+	>>> b.integer_validator()
+	Traceback (most recent call last):
+	...
+    	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Missing one arg:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies")
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+giving a non int arg:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies",  2.58)
+	Traceback (most recent call last):
+	...
+	TypeError: holbies must be an integer
+
+giving a 0:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: holbies must be greater than 0
+
+passing a long int:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies", 123456789123456789123456789)
+
+
+
