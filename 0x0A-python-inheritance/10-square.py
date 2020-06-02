@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module 1 
+module 1
 """
 
 
@@ -12,5 +12,6 @@ class Square(Rectangle):
     def __init__(self, size):
         """function 1"""
         super().__init__(size, size)
+        """function 2"""
         self.integer_validator("size", size)
         self.__size = size
