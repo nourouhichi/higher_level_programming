@@ -42,5 +42,22 @@ passing a long int:
         >>> b = BaseGeometry()
         >>> b.integer_validator("holbies", 123456789123456789123456789)
 
+passing an arg:
+        >>> b = BaseGeometry(3)
+	Traceback (most recent call last):
+	...
+	TypeError: object() takes no parameters
 
+passing an empty string:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("", 25)
+
+passing a negative int:
+	>>> b = BaseGeometry()
+        >>> b.integer_validator("holbies", -5)
+        Traceback (most recent call last):
+        ...
+        ValueError: holbies must be greater than 0
+
+passing a char:
 
