@@ -8,9 +8,13 @@ module 1
 class Square(Rectangle):
     """ class 1"""
     def __init__(self, size):
-        super().__init__(size, size)
-        self.integer_validator("size", size)
+        size = super().integer_validator("size", size)
         self.__size = size
 
-        def area(self):
-            return self.__size * self.__size
+    def area(self):
+        return self.__size * self.__size
+
+    def __str__(self):
+        stri = "[Rectangle] "
+        stri += str(self.__size) + '/' + str(self.__size)
+        return stri
