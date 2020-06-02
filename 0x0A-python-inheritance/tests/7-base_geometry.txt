@@ -72,3 +72,10 @@ passing a string:
         Traceback (most recent call last):
         ...
         TypeError: holbies must be an integer
+
+passing a tuple:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies",(1, 2))
+        Traceback (most recent call last):
+        ...
+        TypeError: holbies must be an integer
