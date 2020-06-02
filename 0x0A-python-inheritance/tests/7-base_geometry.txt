@@ -59,5 +59,10 @@ passing a negative int:
         ...
         ValueError: holbies must be greater than 0
 
-passing a char:
+passing more than 2 args:
+        >>> b = BaseGeometry()
+        >>> b.integer_validator("holbies", 1, 58)
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
