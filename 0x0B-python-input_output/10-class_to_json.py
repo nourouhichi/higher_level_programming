@@ -4,6 +4,6 @@ module 1
 """
 
 
-def class_to_json(ob):
+def class_to_json(obj):
     """function 1"""
     return obj.__dict__
