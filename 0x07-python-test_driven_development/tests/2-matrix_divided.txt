@@ -21,7 +21,6 @@ List, zero:
         >>> matrix_divided(matrix, 0)
 	Traceback (most recent call last):
 	...
-		raise ZeroDivisionError("division by zero")
     	ZeroDivisionError: division by zero
 
 List, inf:
@@ -39,7 +38,6 @@ List, None:
 	>>> matrix_divided(matrix, None)
 	Traceback (most recent call last):
 	...
-		raise TypeError("div must be a number")
 	TypeError: div must be a number
 
 List, no div:
@@ -54,7 +52,6 @@ None, int:
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
 	...
-    		raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Uneven length of lists, int:
@@ -62,7 +59,6 @@ Uneven length of lists, int:
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
 	...
-	    raise TypeError("Each row of the matrix must have the same size")
     	TypeError: Each row of the matrix must have the same size
 
 Empty list, int:
