@@ -3,7 +3,7 @@ printing square
 ===============
 
 Importing module:
-print_square = __import__('4-print_square').print_square
+	>>> print_square = __import__('4-print_square').print_square
 
 Testing:
 correct input:
