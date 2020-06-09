@@ -9,7 +9,7 @@ class Rectangle(Base):
     """class 1 """
     def __init__(self, width, height, x=0, y=0, id=None):
         """function 1"""
-        super().__init__(id)
+        Base.__init__(self, id)
         self.width = width
         self.height = height
         self.x = x
