@@ -17,10 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """function 2"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """function 3"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -29,10 +31,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """function"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """function 4 """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -41,10 +45,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """function 5"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """function 6"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -53,10 +59,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """function 7"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """function 8"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -64,9 +72,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """function 9"""
         return self.__height * self.__width
 
     def display(self):
+        """function 10"""
         for i in range(self.__y):
             print()
         for i in range(self.__height):
@@ -74,10 +84,12 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format\
-                (self.id, self.__x, self.__y, self.__width, self.__height)
+        """function 11"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format
+    (self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """function 12"""
         if args:
             args_list = enumerate(args)
             for i, j in args_list:
@@ -97,5 +109,6 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        return {'id': self.id, 'width': self.width, \
+        """function 13"""
+        return {'id': self.id, 'width': self.width,
                 'height': self.height, 'x': self.x, 'y': self.y}
