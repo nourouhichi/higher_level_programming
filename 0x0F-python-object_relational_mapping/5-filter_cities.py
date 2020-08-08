@@ -15,8 +15,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=db_name, port=3306)
     cur = db.cursor()
-    cur.execute("SELECT  cities.name FROM cities WHERE\
-                states.name = %s ORDER BY cities.id ASC", (city,))
+    cur.execute("SELECT cities.name FROM cities WHERE\
+                states.name = %s ORDER BY cities.id ASC", (city, ))
     rows = cur.fetchall()
     for row in rows:
         print(row)

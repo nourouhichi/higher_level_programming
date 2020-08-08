@@ -15,8 +15,7 @@ if __name__ == "__main__":
                          passwd=password, db=db_name, port=3306)
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name\
-                FROM cities, states WHERE\
-                cities.states_id = states.id ORDER BY cities.id ASC")
+                FROM cities JOIN states on states.id = state_id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
