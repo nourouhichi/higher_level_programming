@@ -10,13 +10,14 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    city = argv[4]
+    state = argv[4]
 
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=db_name, port=3306)
     cur = db.cursor()
-    cur.execute("SELECT cities.name FROM cities WHERE\
-                states.name = %s ORDER BY cities.id ASC", (city, ))
+    cur.execute("SELECT cities.name FROM cities,states  WHERE\
+                BINARY states.name = %s AND\
+                cities.state_id = states.id ORDER BY cities.id ASC", (city, ))
     rows = cur.fetchall()
     for row in rows:
         print(row)
