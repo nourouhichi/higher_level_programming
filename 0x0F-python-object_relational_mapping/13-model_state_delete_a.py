@@ -15,6 +15,11 @@ if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(username, password, db_name),
                            pool_pre_ping=True)
-    conn = engine.connect()
-    dele = State.delete().where(State.name.like('%a%'))
-    conn.execute(dele)
+    Base.metadata.create_all(engine)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    res = session.query(State).order_by(State.id).all()
+    for state in res:
+        if "a" in state.name:
+            session.delete(state)
+    session.commit()
