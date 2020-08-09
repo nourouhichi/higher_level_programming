@@ -22,4 +22,4 @@ if __name__ == "__main__":
     if inst is not None:
         print("{}: {}".format(inst.id, inst.name))
     else:
-        print("nothing")
+        print("Nothing")
