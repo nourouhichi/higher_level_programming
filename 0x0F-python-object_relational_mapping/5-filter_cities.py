@@ -15,8 +15,9 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost", user=username,
                          passwd=password, db=db_name, port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT cities.name FROM cities WHERE\
-                 state_id = (SELECT id FROM states WHERE name='%s')""", (city, ))
+    cur.execute("SELECT cities.name FROM cities,states  WHERE\
+                BINARY states.name = %s AND\
+                cities.state_id = states.id ORDER BY cities.id ASC", (city, ))
     rows = cur.fetchall()
     for row in rows:
         print(row)
