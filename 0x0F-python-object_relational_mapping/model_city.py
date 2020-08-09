@@ -14,6 +14,6 @@ class City(Base):
     """ creating the state table via python"""
     __tablename__ = 'cities'
 
-    id = Column(Integer, autoincrement=True, primary_key=True,nullable=False)
+    id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
