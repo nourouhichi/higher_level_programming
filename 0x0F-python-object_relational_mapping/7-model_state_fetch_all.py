@@ -16,7 +16,7 @@ if __name__ == "__main__":
                             .format(username, password, db_name),
                             pool_pre_ping=True)
     Base.metadata.create_all(engine)
-    Session = sessionmamker(bind=engine)
+    Session = sessionmaker(bind=engine)
     session = Session()
-    for inst in session.query(State).order_by(State.id).all():
+    for inst in session.query(State).order_by(State.id):
         print("{}: {}".format(inst.id, inst.name))
