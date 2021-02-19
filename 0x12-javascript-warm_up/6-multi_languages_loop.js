@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const lg = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+const lg = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 for (let i = 0; i < 3; i++) {
   console.log(lg[i]);
 }
